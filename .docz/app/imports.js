@@ -1,6 +1,6 @@
 export const imports = {
-  'docs/Tooltip.mdx': () =>
+  'docs/Example.mdx': () =>
     import(
-      /* webpackPrefetch: true, webpackChunkName: "docs-tooltip" */ 'docs/Tooltip.mdx'
+      /* webpackPrefetch: true, webpackChunkName: "docs-example" */ 'docs/Example.mdx'
     ),
 }

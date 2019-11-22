@@ -1,22 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Example = props => {
-  const { sample } = props;
+import UseForm, {propTypes as formPropTypes, defaultProps as formDefaultProps} from './useForm';
+
+const FormStateManager = props => {
+  const { stateSchema, validationSchema, callback } = props;
 
   return (
-    <React.Fragment>
-      <div sample={sample}>Test</div>
-    </React.Fragment>
+    <UseForm stateSchema={stateSchema} validationSchema={validationSchema} callback={callback} />
   );
 };
 
-Example.propTypes = {
-  sample: PropTypes.string,
-};
+FormStateManager.propTypes = formPropTypes
+FormStateManager.defaultProps = formDefaultProps
 
-Example.defaultProps = {
-  sample: null,
-};
-
-export default Example;
+export default FormStateManager;
